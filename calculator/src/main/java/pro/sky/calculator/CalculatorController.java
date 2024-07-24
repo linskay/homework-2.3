@@ -47,7 +47,7 @@ public class CalculatorController {
     }
 
     @GetMapping(path = "/divide")
-    public String divide (@RequestParam(value = "num1", required = false) Integer number1,
+    public String divide(@RequestParam(value = "num1", required = false) Integer number1,
                          @RequestParam(value = "num2", required = false) Integer number2) {
         if (number1 == null || number2 == null || number2 == 0) {
             return calculatorService.textError();
